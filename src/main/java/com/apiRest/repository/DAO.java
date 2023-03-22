@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public class DAO {
+    //llenado lista de datos de personas
     public static List<Persona> personas = new ArrayList<>();
     static {
         personas.add(new Persona(1, "ALEJANDRO", "RUIZ", "DAWEF49874", "AR68465", 22, "M", "Mexicana"));
@@ -20,7 +21,8 @@ public class DAO {
     public List<Persona> getPersonas() {
         return personas;
     }
-
+    
+    //busca una persona por su id en una lista de objetos Persona
     public Persona getPersonaById(long id) {
         return personas.stream()
                 .filter(p -> p.getId() == id)

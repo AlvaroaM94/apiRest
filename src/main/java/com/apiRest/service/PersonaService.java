@@ -11,10 +11,11 @@ import java.util.List;
 public class PersonaService {
     @Autowired
     private DAO dao;
-
+    //devuelve una lista de objetos de tipo Persona
     public List<Persona> getPersonas() {
         return dao.getPersonas();
     }
+    //devuelve una Persona pidiendo como parametro id
     public Persona getPersonaById(long id) {
         return dao.getPersonaById(id);
     }

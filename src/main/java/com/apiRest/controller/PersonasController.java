@@ -15,12 +15,12 @@ import java.util.List;
 public class PersonasController {
     @Autowired
     private PersonaService personaService;
-
+    //metodo get regresa la lista de las personas
     @GetMapping("/personas")
     public List<Persona> getPersonas() {
         return personaService.getPersonas();
     }
-
+    //metodo get regresa los datos de la persona por medio del id de persona
     @GetMapping("/personas/{id}")
     public Persona getPersonaById(@PathVariable("id") long id) {
         return personaService.getPersonaById(id);
